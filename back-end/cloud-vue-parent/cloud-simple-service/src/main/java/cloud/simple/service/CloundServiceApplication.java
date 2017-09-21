@@ -7,6 +7,7 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
 @Controller
@@ -14,7 +15,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 @EnableDiscoveryClient
 @SpringBootApplication
 @EnableEurekaClient
-//@EnableWebMvc
+@EnableWebMvc
 @MapperScan(basePackages={"cloud.simple.service.dao","com.framework.common.base"})
 public class CloundServiceApplication extends WebMvcConfigurerAdapter  {
 	
