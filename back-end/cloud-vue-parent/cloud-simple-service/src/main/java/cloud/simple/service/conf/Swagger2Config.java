@@ -53,7 +53,7 @@ public class Swagger2Config extends WebMvcConfigurerAdapter
 				//页面标题
 				.title("SpringCloud + vue RESTful API")
 				//创建人
-				.contact("leo.aqing")
+				.contact("mvphjx")
 				//版本号
 				.version("1.0")
 				//描述
