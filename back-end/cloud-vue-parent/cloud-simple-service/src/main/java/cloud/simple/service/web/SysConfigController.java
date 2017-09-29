@@ -39,4 +39,18 @@ public class SysConfigController extends CommonController{
 		}
 		return FastJsonUtils.resultSuccess(200, "查询配置成功", data);
 	}
+	@ApiOperation(value = "保存配置", httpMethod="POST")
+	@PostMapping(value = "/systemConfigs", produces = {"application/json;charset=UTF-8"})
+	public String systemConfigs(@RequestBody(required=false) Map<String,String> record,HttpServletRequest request) {
+		List<SysSystemConfig> configs = sysSystemConfigService.select(null);
+		for (SysSystemConfig c : configs) {
+		    String value= record.get(c.getName());
+		    if(value!=null){
+                c.setValue(value);
+            }
+            sysSystemConfigService.updateByPrimaryKey(c);
+		}
+		return FastJsonUtils.resultSuccess(200, "保存配置成功",null);
+	}
+
 }
