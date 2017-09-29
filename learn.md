@@ -14,6 +14,8 @@ learn
 * cloud-simple-service：自定义的微服务。
     springboot
     80
+    http://localhost/v2/api-docs
+    http://localhost/swagger-ui.html
     
 * cloud-zipkin-ui：分布式链路调用监控系统，聚合各业务系统调用延迟数据，达到链路调用监控跟踪。
     springboot
