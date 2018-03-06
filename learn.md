@@ -23,6 +23,10 @@ Spring Cloud Config Client根据Spring框架的Environment和PropertySource从Sp
     http://localhost/v2/api-docs
     http://localhost/swagger-ui.html
     
+    技术栈：mybatis tkmybatis
+    
+         
+    
 * cloud-zipkin-ui：分布式链路调用监控系统，聚合各业务系统调用延迟数据，达到链路调用监控跟踪。
     springboot
     9012
@@ -30,8 +34,6 @@ Spring Cloud Config Client根据Spring框架的Environment和PropertySource从Sp
 * cloud-vue : vue（Vue2.x + Vue-router2.x + Vuex)的前端项目
 
         fore-end/cloud-vue/.eslintrc.json  进行eslint 校验配置
-    8080  
-    
-        admin 123456
+    8080  admin 123456
         
 * 数据库使用的mysql数据库        

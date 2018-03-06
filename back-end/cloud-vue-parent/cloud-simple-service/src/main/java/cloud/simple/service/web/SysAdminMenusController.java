@@ -112,7 +112,7 @@ public class SysAdminMenusController extends CommonController{
 		}
 		try {
 			for (int i = 0; i < ids.size(); i++) {
-				//sysAdminMenuService.deleteByPrimaryKey(ids.get(i));
+				sysAdminMenuService.deleteByPrimaryKey(ids.get(i));
 			}
 		} catch (Exception e) {
 			return FastJsonUtils.resultError(-200, "操作失败", null);
