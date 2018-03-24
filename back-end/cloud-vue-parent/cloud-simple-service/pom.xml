@@ -196,6 +196,19 @@
 			<artifactId>javax.persistence</artifactId>
 			<version>2.0.0</version>
 		</dependency>
+		<!--javamelody monitoring-->
+		<dependency>
+			<groupId>net.bull.javamelody</groupId>
+			<artifactId>javamelody-spring-boot-starter</artifactId>
+			<version>1.71.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-aop</artifactId>
+		</dependency>
+
+
+
 	</dependencies>
 	<build>
 		<plugins>
