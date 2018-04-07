@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cloud.simple.crawler.dao.ImageCrawlerDao">
+  <resultMap id="BaseResultMap" type="cloud.simple.crawler.model.ImageCrawler">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <result column="GROUP_UUID" jdbcType="VARCHAR" property="groupUuid" />
+    <result column="NAME" jdbcType="VARCHAR" property="name" />
+    <result column="UUID" jdbcType="VARCHAR" property="uuid" />
+    <result property="createTime" column="CREATE_TIME" javaType="java.time.LocalDateTime" jdbcType="TIMESTAMP"/>
+    <result column="TYPE" jdbcType="VARCHAR" property="type" />
+    <result column="PATH" jdbcType="VARCHAR" property="path" />
+    <result column="LOCAL_PATH" jdbcType="VARCHAR" property="localPath" />
+  </resultMap>
+</mapper>
