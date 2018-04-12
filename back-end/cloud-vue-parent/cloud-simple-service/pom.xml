@@ -85,12 +85,11 @@
         </dependency> -->
 		
 		<!-- 依赖包 -->
-		
 		<dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>druid</artifactId>
-            <version>${druid.version}</version>
-        </dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>druid-spring-boot-starter</artifactId>
+			<version>${druid.version}</version>
+		</dependency>
         
         <!-- -->
 		<dependency>
