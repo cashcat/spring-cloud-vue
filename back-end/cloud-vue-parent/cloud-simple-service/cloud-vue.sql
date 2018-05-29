@@ -12,7 +12,14 @@ File Encoding         : 65001
 
 Date: 2017-04-27 16:08:52
 */
+# mysql8
+# CREATE USER `cloud`@'localhost' IDENTIFIED BY 'cloud';
+# GRANT ALL ON *.* TO `cloud`@'localhost' WITH GRANT OPTION;
+# ALTER USER `cloud-vue`@'localhost' IDENTIFIED WITH mysql_native_password BY 'cloud-vue'
+#
 
+CREATE DATABASE IF NOT EXISTS `cloud-vue`  DEFAULT CHARACTER SET utf8 ;
+USE `cloud-vue`;
 SET FOREIGN_KEY_CHECKS=0;
 
 -- ----------------------------

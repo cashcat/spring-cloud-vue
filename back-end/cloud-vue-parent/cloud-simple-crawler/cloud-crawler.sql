@@ -12,7 +12,8 @@ File Encoding         : 65001
 
 Date: 2017-04-27 16:08:52
 */
-
+CREATE DATABASE IF NOT EXISTS `cloud-vue`  DEFAULT CHARACTER SET utf8 ;
+USE `cloud-vue`;
 SET FOREIGN_KEY_CHECKS=0;
 
 -- ----------------------------
