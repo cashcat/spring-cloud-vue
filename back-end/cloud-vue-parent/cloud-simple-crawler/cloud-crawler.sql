@@ -25,7 +25,7 @@ CREATE TABLE `TEAM_CRAWLER` (
   `name` varchar(110) DEFAULT NULL,
   `status` varchar(110) DEFAULT NULL,
   `fail_count` int(5) DEFAULT 0,
-  `create_time` TIMESTAMP  NOT NULL,
+  `create_time` TIMESTAMP  NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`uuid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 -- ----------------------------
@@ -39,7 +39,7 @@ CREATE TABLE `IMAGE_CRAWLER` (
   `type` varchar(110) DEFAULT NULL,
   `path` varchar(110) DEFAULT NULL,
   `local_path` varchar(110) DEFAULT NULL,
-  `create_time` TIMESTAMP  NOT NULL,
+  `create_time` TIMESTAMP  DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`uuid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 -- ----------------------------
@@ -52,7 +52,7 @@ CREATE TABLE `VIDEO_CRAWLER` (
   `name` varchar(110) DEFAULT NULL,
   `type` varchar(110) DEFAULT NULL,
   `path` varchar(110) DEFAULT NULL,
-  `create_time` TIMESTAMP  NOT NULL,
+  `create_time` TIMESTAMP  DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`uuid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 

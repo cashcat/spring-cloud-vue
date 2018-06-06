@@ -12,7 +12,7 @@ http://server.goteaming.com.cn/Player_Base/Game/GetTeamDataSource
 
 
 储存位置
-   文件c:/test/队伍id
+   文件c:/test/队伍id(配置文件中指定)
    数据库设计：
    队伍表 TEAM_CRAWLER 
    图片表 IMAGE_CRAWLER
@@ -24,5 +24,14 @@ http://server.goteaming.com.cn/Player_Base/Game/GetTeamDataSource
 技术栈
  mybatis  
  xml配置需要映射 dao+model
+ 
+做一个完整的爬虫web服务器。
+1 队伍管理
+     功能：更新队伍，下载的状态，下载视频，下载图片，队伍详情查看
+2 图片管理
+     功能：图片详情页，重新下载
+     
+3 视频管理
+     功能：视频详情页，重新下载
 
 

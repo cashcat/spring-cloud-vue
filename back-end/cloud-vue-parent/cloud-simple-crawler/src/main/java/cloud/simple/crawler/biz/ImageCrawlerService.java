@@ -20,4 +20,6 @@ public class ImageCrawlerService extends BaseServiceImpl<ImageCrawler> {
 		return dao;
 	}
 
+
+
 }

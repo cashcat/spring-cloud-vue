@@ -73,5 +73,31 @@ public class ImageCrawlerTest {
 
     }
 
+    /**
+     * save all data to db and disk
+     * @throws UnsupportedEncodingException
+     */
+    @Test
+    public void saveImagesByParam() throws UnsupportedEncodingException {
+        TeamCrawler teamCrawler = new TeamCrawler();
+        teamCrawler.setName("正义联盟");
+        List<TeamCrawler> list = teamService.select(teamCrawler);
+        for(TeamCrawler team :list){
+            Request request = new Request(Web.TEAMDATA_URL);
+            request.setMethod(HttpConstant.Method.POST);
+            request.addHeader("User-Agent",Web.USER_AGENT);
+            String json = "{\"GTId\":\""+team.getUuid()+"\"}";
+            request.setRequestBody(HttpRequestBody.json(json,"utf-8"));
+            PageProcessor page = new TeamJsonProcessor();
+            Site site = page.getSite();
+            site.addHeader("User-Agent",Web.USER_AGENT);
+            Spider s =Spider.create(page);
+            s.addPipeline(imagePipeline);
+            s.addRequest(request);
+            s.run();
+        }
+
+    }
+
 
 }

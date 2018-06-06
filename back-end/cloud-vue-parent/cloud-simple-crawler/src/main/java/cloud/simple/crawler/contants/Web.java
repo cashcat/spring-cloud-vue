@@ -1,7 +1,7 @@
 package cloud.simple.crawler.contants;
 
 public class Web {
-    public final static String SAVE_PATH = "C:\\cloud-simple-crawler\\";
+    public final static String SAVE_PATH = "F:\\cloud-simple-crawler\\";
     public final static String TEAM_URL = "http://server.goteaming.com.cn/Player_Base/Game/ActivityFinish";
     public final static String IMAGE_URL = "http://server.goteaming.com.cn/";
     public final static String TEAMDATA_URL = "http://server.goteaming.com.cn/Player_Base/Game/GetTeamDataSource";

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div class="container">
+    <div class="panel panel-default">
+        <div class="panel-heading text-center">
+            <h2>队伍列表</h2>
+        </div>
+
+        <div class="panel-body">
+            <table class="table table-hover">
+                <thead>
+                <tr>
+                    <td>ID</td>
+                    <td>名称</td>
+                    <td>创建时间</td>
+                    <td>状态</td>
+                    <td>下载失败次数</td>
+                    <td>图片数量</td>
+                    <td>视频数量</td>
+                </tr>
+                </thead>
+                <tbody id="app-4">
+                <tr v-for="model in list">
+                    <td>{{model.uuid}}</td>
+                    <td>{{model.name}}</td>
+                    <td>{{model.createTime}}</td>
+                    <td>{{model.status}}</td>
+                    <td>{{model.failCount}}</td>
+                    <td>{{model.failCount}}</td>
+                    <td>{{model.failCount}}</td>
+                    <td><a class="btn btn-info"  :href ="'${pageContext.request.contextPath}/'+model.uuid+'/detail'" target="_blank">详情</a></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+</body>
+<script src="https://cdn.bootcss.com/jquery/1.12.2/jquery.js"></script>
+<script src="https://cdn.bootcss.com/vue-strap/1.1.37/vue-strap.min.js"></script>
+<script src="https://cdn.bootcss.com/vue/2.4.2/vue.js"></script>
+<script>
+    new Vue({
+        el: '#app-4',
+        data: {
+            list: ''
+        },
+        methods: {
+            refreshMessage(resource) {
+                this.$http.get('/team/query').then((response){
+                    this.list = response.data.data;
+                });
+            }
+        }
+    });
+
+</script>
+</html>
