@@ -6,6 +6,9 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.ResponseEntity;
 
+import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 import springfox.documentation.builders.ApiInfoBuilder;
 import springfox.documentation.builders.PathSelectors;
 import springfox.documentation.builders.RequestHandlerSelectors;
@@ -16,7 +19,15 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 @Configuration
 @EnableSwagger2
-public class Swagger2Config {
+public class Swagger2Config extends WebMvcConfigurerAdapter
+{
+	@Override
+	public void addResourceHandlers(ResourceHandlerRegistry registry) {
+		registry.addResourceHandler("swagger-ui.html")
+				.addResourceLocations("classpath:/META-INF/resources/");
+		registry.addResourceHandler("webjars/**")
+				.addResourceLocations("classpath:/META-INF/resources/webjars/");
+	}
 	/**
 	 * 通过 createRestApi函数来构建一个DocketBean
 	 * 函数名,可以随意命名,喜欢什么命名就什么命名
@@ -42,7 +53,7 @@ public class Swagger2Config {
 				//页面标题
 				.title("SpringCloud + vue RESTful API")
 				//创建人
-				.contact("leo.aqing")
+				.contact("mvphjx")
 				//版本号
 				.version("1.0")
 				//描述

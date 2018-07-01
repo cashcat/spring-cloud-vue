@@ -72,6 +72,7 @@
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
+			<version>8.0.11</version>
 		</dependency>
 		<!--  <dependency>
             <groupId>org.mybatis</groupId>
@@ -85,12 +86,11 @@
         </dependency> -->
 		
 		<!-- 依赖包 -->
-		
 		<dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>druid</artifactId>
-            <version>${druid.version}</version>
-        </dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>druid-spring-boot-starter</artifactId>
+			<version>${druid.version}</version>
+		</dependency>
         
         <!-- -->
 		<dependency>
@@ -149,17 +149,16 @@
             <artifactId>spring-boot-devtools</artifactId>
             <optional>true</optional><!-- optional=true,依赖不会传递，该项目依赖devtools；之后依赖myboot项目的项目如果想要使用devtools，需要重新引入 -->
         </dependency>
-        
-        <dependency>
-		   <groupId>io.springfox</groupId>
-		   <artifactId>springfox-swagger2</artifactId>
-		   <version>2.6.1</version>
-		</dependency>
-		
+
 		<dependency>
-		   <groupId>io.springfox</groupId>
-		   <artifactId>springfox-swagger-ui</artifactId>
-		   <version>2.6.1</version>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger2</artifactId>
+			<version>2.7.0</version>
+		</dependency>
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger-ui</artifactId>
+			<version>2.7.0</version>
 		</dependency>
 		
 		 <!--mybatis-->
@@ -187,12 +186,29 @@
 		    <version>1.2.31</version>
 		</dependency>
 
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-configuration-processor</artifactId>
-            <optional>true</optional>
-        </dependency>
-        
+        <!--<dependency>-->
+            <!--<groupId>org.springframework.boot</groupId>-->
+            <!--<artifactId>spring-boot-configuration-processor</artifactId>-->
+            <!--<optional>true</optional>-->
+        <!--</dependency>-->
+		<dependency>
+			<groupId>org.eclipse.persistence</groupId>
+			<artifactId>javax.persistence</artifactId>
+			<version>2.0.0</version>
+		</dependency>
+		<!--javamelody monitoring-->
+		<dependency>
+			<groupId>net.bull.javamelody</groupId>
+			<artifactId>javamelody-spring-boot-starter</artifactId>
+			<version>1.71.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-aop</artifactId>
+		</dependency>
+
+
+
 	</dependencies>
 	<build>
 		<plugins>
